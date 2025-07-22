@@ -98,7 +98,7 @@ export default function Projects() {
                 ))}
             </div>
 
-            {/* Soundwave bars */}
+            {/* soundwave bars */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1">
                 {[...Array(20)].map((_, i) => (
                     <motion.div
