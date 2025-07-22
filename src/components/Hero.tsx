@@ -10,7 +10,7 @@ export default function Hero() {
 
     return (
         <section className="relative h-screen flex flex-col justify-center items-center px-6 text-center bg-zinc-950 overflow-hidden">
-            {/* background vid */}
+            {/* background Video */}
             <video
                 autoPlay
                 loop
@@ -22,6 +22,7 @@ export default function Hero() {
                 Your browser does not support the video tag.
             </video>
 
+            {/* text container with translucent bg */}
             <div className="relative z-10 bg-black bg-opacity-80 rounded-lg px-6 py-4">
                 {/* glitch container */}
                 <motion.div
