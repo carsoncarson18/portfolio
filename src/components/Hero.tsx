@@ -18,7 +18,7 @@ export default function Hero() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover z-0"
             >
-                <source src="/bgVisual2.mp4" type="video/mp4" />
+                <source src="/bgVisual1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
