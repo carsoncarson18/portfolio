@@ -1,59 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import LetterGlitch from "./Threads";
+import Threads from "./Threads";
 
 export default function Hero() {
-    const [playing, setPlaying] = useState(false);
-
-    const togglePlaying = () => {
-        setPlaying((prev) => !prev);
-    };
-
     return (
-        <section className="relative h-screen flex flex-col justify-center items-center px-6 text-center bg-zinc-950 overflow-hidden">
-            {/* background Video */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover z-0"
-            >
-                <source src="/bgVisual1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+        <section className="relative h-screen flex flex-col justify-center items-center text-center bg-zinc-950 overflow-hidden">
 
-            {/* text container with translucent bg */}
-            <div className="relative z-10 bg-black bg-opacity-80 rounded-lg px-6 py-4">
-                {/* glitch container */}
+            {/* threads */}
+            <div className="absolute inset-0 w-full h-full z-0">
+                <Threads
+                    amplitude={3}
+                    distance={0}
+                    enableMouseInteraction={true}
+                />
+                <div className="absolute inset-0" />
+            </div>
+
+            {/* text container */}
+            <div className="relative z-10 px-6 py-4">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     className="relative"
                 >
-                    <div className="relative">
-                        <span className="absolute inset-0 text-cyan-400 opacity-70 animate-glitch delay-150 pointer-events-none select-none text-6xl md:text-8xl font-extrabold text-center w-full">
-                            Hi, I'm Carson
-                        </span>
-                        <span className="absolute inset-0 text-fuchsia-400 opacity-50 animate-glitch delay-300 pointer-events-none select-none text-6xl md:text-8xl font-extrabold text-center w-full">
-                            Hi, I'm Carson
-                        </span>
-                        <h1 className="relative text-6xl md:text-8xl font-extrabold text-cyan-300 drop-shadow-[0_0_10px_#22d3ee] select-none">
-                            Hi, I'm Carson
-                        </h1>
-                    </div>
+                    <h1 className="text-white text-6xl md:text-8xl font-extrabold select-none">
+                        Hi, I'm Carson
+                    </h1>
                 </motion.div>
 
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 1.2 }}
-                    className="mt-4 text-lg md:text-2xl text-fuchsia-300 font-light max-w-xl drop-shadow-[0_0_6px_#e879f9]"
+                    className="mt-4 text-white text-lg md:text-2xl font-light max-w-xl"
                 >
-                    Welcome to my portfolio!
+                    Welcome to my portfolio
                 </motion.p>
             </div>
         </section>
-
     );
 }

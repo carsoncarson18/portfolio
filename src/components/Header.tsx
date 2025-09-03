@@ -14,11 +14,13 @@ export default function Header({ playing, togglePlaying }: HeaderProps) {
     };
 
     return (
-        <header className="absolute top-0 left-0 w-full z-50 p-4 flex justify-end">
-            {/* Button to toggle audio playback */}
+        <header className="absolute top-6 left-1/2 -translate-x-1/2 w-full z-50 flex justify-center">
             <button
                 onClick={handleClick}
-                className="bg-fuchsia-600 text-white px-4 py-2 rounded hover:bg-fuchsia-500 transition"
+                className="px-6 py-2 rounded-full text-white font-medium
+                           bg-purple-600/80 hover:bg-purple-500/90 
+                           shadow-lg shadow-purple-500/30
+                           transition-all duration-300 backdrop-blur-sm"
             >
                 {!hasStarted
                     ? "Hear a song I remixed!"

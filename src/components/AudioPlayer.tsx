@@ -8,7 +8,6 @@ interface AudioPlayerProps {
     loop?: boolean;
 }
 
-// hidden background audio player
 export default function AudioPlayer({
     src,
     playing,
@@ -18,7 +17,7 @@ export default function AudioPlayer({
 }: AudioPlayerProps) {
     const audioRef = useRef<HTMLAudioElement>(null);
 
-    // control playback & volume
+    {/* control playback / volume */ }
     useEffect(() => {
         if (!audioRef.current) return;
 

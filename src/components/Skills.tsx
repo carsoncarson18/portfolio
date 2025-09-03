@@ -15,48 +15,42 @@ const skills = [
     { name: "CSS" },
     { name: "TSX / JSX" },
     { name: "C" },
-    { name: "Javascript" },
+    { name: "JavaScript" },
     { name: "Node.js" },
     { name: "Vercel" },
     { name: "Render" },
-
 ];
 
 export default function SkillsCarousel() {
     const [isPaused, setIsPaused] = useState(false);
 
     return (
-        <section className="py-24 px-6 max-w-5xl mx-auto text-center">
-            <motion.h2
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-pink-400 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_#d946ef]"
-            >
+        <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center relative">
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-cyan-400 to-fuchsia-500 rounded-full"></span>
                 Skills
-            </motion.h2>
+            </h2>
 
+            {/* scrolling wrapper */}
             <div
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 className="overflow-hidden whitespace-nowrap cursor-default select-none"
             >
                 <div
-                    className={`inline-flex gap-10 animate-scrollSkills ${isPaused ? "animation-play-state-paused" : ""}`}
+                    className={`inline-flex gap-8 animate-scrollSkills ${isPaused ? "animation-play-state-paused" : ""}`}
                 >
-                    {/* carousel of skills */}
                     {[...skills, ...skills].map(({ name }, i) => (
-                        <div
+                        <motion.div
                             key={i}
-                            className="rainbow-border relative inline-block w-52 rounded-lg p-[2px] mb-4 cursor-default select-none"
+                            whileHover={{ scale: 1.05 }}
+                            className="relative inline-block min-w-[160px] rounded-xl p-[1px] bg-gradient-to-r from-cyan-500/40 to-fuchsia-500/40 hover:from-cyan-500/60 hover:to-fuchsia-500/60 transition-all"
                         >
-                            <div className="bg-zinc-950 rounded-lg px-6 py-6 text-center animate-pulseGlow">
-                                <h3 className="text-lg font-semibold text-fuchsia-400">{name}</h3>
+                            <div className="bg-zinc-950/80 rounded-xl px-6 py-4 text-center">
+                                <h3 className="text-lg font-medium text-white">{name}</h3>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-
-
                 </div>
             </div>
         </section>

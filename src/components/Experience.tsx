@@ -15,18 +15,14 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="relative bg-transparent py-20 px-6 text-white max-w-5xl mx-auto"
+            className="relative py-20 px-6 max-w-6xl mx-auto"
         >
-            <motion.h2
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className="text-4xl md:text-5xl font-extrabold text-cyan-400 mb-12 drop-shadow-[0_0_10px_#22d3ee] text-center"
-            >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12 text-center relative">
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-pink-400 rounded-full"></span>
                 Experience
-            </motion.h2>
+            </h2>
 
-            {/* Experience cards */}
+
             <div className="flex flex-col gap-12">
                 {experiences.map(({ role, company, date, description }, i) => (
                     <motion.div
@@ -35,13 +31,22 @@ export default function Experience() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: i * 0.25 }}
                         viewport={{ once: true }}
-                        className="border border-dashed border-fuchsia-400 rounded-xl p-5 bg-zinc-950/80 backdrop-blur-sm"
+                        className="relative rounded-xl p-6 bg-zinc-900/50 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300 shadow-md shadow-cyan-500/20"
                     >
-                        <h3 className="text-lg font-mono text-cyan-300">
-                            ✦ <span className="text-white">{role}</span> <span className="text-pink-400">@ {company}</span>
+                        {/* Title now clean white */}
+                        <h3 className="text-3xl font-bold text-white mb-1">
+                            {role}{" "}
+                            <span className="text-pink-400 font-light">@ {company}</span>
                         </h3>
-                        <p className="text-sm text-green-400 font-mono mb-1">{date}</p>
-                        <p className="text-zinc-300 font-mono text-sm">{description}</p>
+
+                        {/* Date */}
+                        <p className="text-lg text-cyan-300 mb-3">{date}</p>
+
+                        {/* Description */}
+                        <p className="text-zinc-300 text-lg leading-relaxed">{description}</p>
+
+                        {/* Floating accent dot */}
+                        <div className="absolute top-0 right-0 w-3 h-3 bg-pink-400 rounded-full translate-x-1/2 -translate-y-1/2"></div>
                     </motion.div>
                 ))}
             </div>
