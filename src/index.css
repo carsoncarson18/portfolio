@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  @apply bg-zinc-950 text-white;
+  @apply bg-[#FCFCFC] text-[#2D1C1E];
 }
 
 /* Glitch animation */

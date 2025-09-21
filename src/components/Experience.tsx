@@ -9,21 +9,30 @@ const experiences = [
         description:
             "With Virtue, I developed backend VOIP solutions to improve performance and user experience. I led client onboarding and new hire training. I also troubleshot network issues via SIP flow analysis, provided on-site IT support, and managed hardware setups.",
     },
+
+    {
+        role: "Web Designer",
+        company: "UCF Fashion Society",
+        date: "August 2025 - present",
+        description:
+            "With Virtue, I developed backend VOIP solutions to improve performance and user experience. I led client onboarding and new hire training. I also troubleshot network issues via SIP flow analysis, provided on-site IT support, and managed hardware setups.",
+    },
 ];
 
 export default function Experience() {
     return (
         <section
             id="experience"
-            className="relative py-20 px-6 max-w-6xl mx-auto"
+            className="relative py-20 px-6 max-w-6xl mx-auto bg-[#FCFCFC]"
         >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12 text-center relative">
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-pink-400 rounded-full"></span>
+            {/* Heading */}
+            <h2 className="text-4xl md:text-5xl font-normal text-[#2D1C1E] mb-12 text-center relative">
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#6B424D] rounded-full"></span>
                 Experience
             </h2>
 
-
-            <div className="flex flex-col gap-12">
+            {/* Experience list */}
+            <div className="flex flex-col gap-12 md:flex-row md:gap-8">
                 {experiences.map(({ role, company, date, description }, i) => (
                     <motion.div
                         key={role + company}
@@ -31,22 +40,22 @@ export default function Experience() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: i * 0.25 }}
                         viewport={{ once: true }}
-                        className="relative rounded-xl p-6 bg-zinc-900/50 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300 shadow-md shadow-cyan-500/20"
+                        className="flex-1 relative rounded-2xl p-8 bg-white/10 backdrop-blur-sm border border-[#6B424D]/20 shadow-sm hover:scale-[1.02] transition-transform duration-300"
                     >
-                        {/* Title now clean white */}
-                        <h3 className="text-3xl font-bold text-white mb-1">
+                        {/* Role & Company */}
+                        <h3 className="text-2xl md:text-3xl font-light text-[#2D1C1E] mb-2">
                             {role}{" "}
-                            <span className="text-pink-400 font-light">@ {company}</span>
+                            <span className="text-[#6B424D] font-light">@ {company}</span>
                         </h3>
 
                         {/* Date */}
-                        <p className="text-lg text-cyan-300 mb-3">{date}</p>
+                        <p className="text-[#3B2A2C]/90 text-lg mb-4">{date}</p>
 
                         {/* Description */}
-                        <p className="text-zinc-300 text-lg leading-relaxed">{description}</p>
+                        <p className="text-[#3B2A2C]/90 text-lg leading-relaxed">{description}</p>
 
-                        {/* Floating accent dot */}
-                        <div className="absolute top-0 right-0 w-3 h-3 bg-pink-400 rounded-full translate-x-1/2 -translate-y-1/2"></div>
+                        {/* Subtle marker */}
+                        <div className="absolute top-0 right-0 w-3 h-3 bg-[#6B424D] rounded-full translate-x-1/2 -translate-y-1/2"></div>
                     </motion.div>
                 ))}
             </div>
