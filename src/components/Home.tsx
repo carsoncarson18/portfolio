@@ -15,9 +15,8 @@ export default function Home() {
                 <div className="absolute inset-0" />
             </div>
 
-            {/* top bar */}
             <div className="absolute top-0 left-0 w-full flex justify-between px-6 py-6 z-10">
-                {/* left side: name + socials */}
+                {/* Left: name + socials */}
                 <div className="flex flex-col space-y-3">
                     <h1 className="text-black text-2xl md:text-3xl select-none">
                         Carson Davie
@@ -54,7 +53,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* right side: open portfolio */}
+                {/* Right: portfolio */}
                 <Link
                     to="/portfolio"
                     className="bg-black text-white text-base font-light px-6 rounded-full transition-colors flex items-center space-x-2"

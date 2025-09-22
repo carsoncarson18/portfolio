@@ -15,7 +15,7 @@ const experiences = [
         company: "UCF Fashion Society",
         date: "August 2025 - present",
         description:
-            "With Virtue, I developed backend VOIP solutions to improve performance and user experience. I led client onboarding and new hire training. I also troubleshot network issues via SIP flow analysis, provided on-site IT support, and managed hardware setups.",
+            "I worked with a 15-member design team to launch the Fashion Society’s first official website, building responsive UI components and photo galleries in React and Tailwind while bringing Figma designs to life in an Agile-inspired workflow.",
     },
 ];
 

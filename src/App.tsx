@@ -19,7 +19,7 @@ export default function App() {
 
     return (
         <div className="relative min-h-screen font-sans bg-[#FCFCFC] text-black">
-            {/* Background Audio */}
+            {/* Background audio */}
             <AudioPlayer
                 src="/naiveRemix.wav"
                 playing={playing}
@@ -27,7 +27,7 @@ export default function App() {
                 volume={0.2}
             />
 
-            {/* Sticky Navigation only on /portfolio */}
+            {/* Sticky nav only on /portfolio */}
             {location.pathname === "/portfolio" && (
                 <PillNav
                     logo="/favico.png"
