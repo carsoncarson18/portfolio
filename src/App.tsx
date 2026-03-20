@@ -11,7 +11,7 @@ import PillNav from "./components/PillNav";
 
 export default function App() {
     const [playing, setPlaying] = useState(false);
-    const [muted, setMuted] = useState(false);
+    const muted = false;
 
     const togglePlaying = () => setPlaying(prev => !prev);
 
