@@ -5,7 +5,7 @@ const experiences = [
     {
         role: "IT & Network Support Intern",
         company: "Lightspeed Technology",
-        date: "June 2024 - present",
+        date: "June 2024 - December 2025",
         description:
             "With Virtue, I developed backend VOIP solutions to improve performance and user experience. I led client onboarding and new hire training. I also troubleshot network issues via SIP flow analysis, provided on-site IT support, and managed hardware setups.",
     },
