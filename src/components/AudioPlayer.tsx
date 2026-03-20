@@ -17,7 +17,7 @@ export default function AudioPlayer({
 }: AudioPlayerProps) {
     const audioRef = useRef<HTMLAudioElement>(null);
 
-    {/* control playback / volume */ }
+    // control playback / volume
     useEffect(() => {
         if (!audioRef.current) return;
 
