@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Education() {
     return (
-        <section className="relative px-6 py-20 bg-[#FCFCFC] overflow-hidden">
+        <section className="relative px-6 py-20 bg-[#FEFEF6] overflow-hidden">
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-normal text-[#2D1C1E] mb-16 text-center relative">
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#6B424D] rounded-full"></span>

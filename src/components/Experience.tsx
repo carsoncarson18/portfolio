@@ -23,7 +23,7 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="relative py-20 px-6 max-w-6xl mx-auto bg-[#FCFCFC]"
+            className="relative py-20 px-6 max-w-6xl mx-auto bg-[#FEFEF6]"
         >
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-normal text-[#2D1C1E] mb-12 text-center relative">

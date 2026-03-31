@@ -7,7 +7,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ id }) => {
     return (
-        <section id={id} className="relative bg-[#FCFCFC] px-6 py-20 overflow-hidden">
+        <section id={id} className="relative bg-[#FEFEF6] px-6 py-20 overflow-hidden">
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-normal text-[#2D1C1E] mb-16 text-center relative">

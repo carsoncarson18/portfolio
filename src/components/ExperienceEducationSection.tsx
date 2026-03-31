@@ -8,7 +8,7 @@ interface ExperienceEducationSectionProps {
 
 const ExperienceEducationSection: React.FC<ExperienceEducationSectionProps> = ({ id }) => {
     return (
-        <section id={id} className="relative bg-[#FCFCFC] px-6 py-15 overflow-hidden max-w-6xl mx-auto">
+        <section id={id} className="relative bg-[#FEFEF6] px-6 py-15 overflow-hidden max-w-6xl mx-auto">
 
             {/* Flex layout */}
             <div className="flex flex-col md:flex-row gap-12">

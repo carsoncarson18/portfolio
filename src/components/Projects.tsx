@@ -53,7 +53,7 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
     return (
         <section
             id={id}
-            className="relative bg-[#FCFCFC] px-6 py-20 text-[#2D1C1E] overflow-hidden"
+            className="relative bg-[#FEFEF6] px-6 py-20 text-[#2D1C1E] overflow-hidden"
         >
 
             <h2 className="text-4xl md:text-5xl font-normal mb-12 text-center relative">

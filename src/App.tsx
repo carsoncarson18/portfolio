@@ -18,7 +18,7 @@ export default function App() {
     const location = useLocation();
 
     return (
-        <div className="relative min-h-screen font-sans bg-[#FCFCFC] text-black">
+        <div className="relative min-h-screen font-sans bg-[#FEFEF6] text-black">
             {/* Background audio */}
             <AudioPlayer
                 src="/naiveRemix.wav"

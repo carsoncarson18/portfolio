@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        <section className="relative h-screen flex flex-col justify-center items-center bg-[#FCFCFC] overflow-hidden">
+        <section className="relative h-screen flex flex-col justify-center items-center bg-[#FEFEF6] overflow-hidden">
             <div className="absolute inset-0 w-full h-full z-0">
                 <video
                     autoPlay

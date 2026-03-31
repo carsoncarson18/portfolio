@@ -7,7 +7,7 @@ interface ContactProps {
 
 export default function Contact({ id }: ContactProps) {
     return (
-        <footer id={id} className="bg-[#FCFCFC] text-[#2D1C1E] py-6 px-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 border-t border-[#000000]">
+        <footer id={id} className="bg-[#FEFEF6] text-[#2D1C1E] py-6 px-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 border-t border-[#000000]">
             {/* Copyright */}
             <p className="text-sm font-mono text-[#6B424D]">
                 © <span className="text-[#6B424D]/80 font-bold">Carson Davie</span> • Developer Portfolio
