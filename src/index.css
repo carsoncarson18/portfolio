@@ -125,3 +125,9 @@ body {
     0 0 20px #22d3ee,
     0 0 30px #a855f7;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
