@@ -40,6 +40,15 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
             bg: "rgba(167,196,198,0.8)",
         },
         {
+            title: "UCF Fashion Society",
+            description:
+                "The official website for UCF's Fashion Society, featuring responsive photo galleries and event pages.",
+            tech: ["React", "Tailwind", "Figma"],
+            url: "https://ucffashionsociety.com/",
+            image: "/fshomepage.jpg",
+            bg: "rgba(251,207,232,0.8)",
+        },
+        {
             title: "Naive Instrumental Dj_Dave Remix",
             description: "The song playing in the background!",
             tech: ["SonicPI", "Ruby"],

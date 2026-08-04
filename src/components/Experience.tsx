@@ -7,21 +7,21 @@ const experiences = [
         company: "Brown & Brown",
         date: "May 2026 - August 2026",
         description:
-            "I designed and built Scout, a Claude-powered security operations agent that automates first-pass security investigations across nine enterprise security platforms. Using an MCP server and a reusable library of tools and skills, Scout gathers evidence, analyzes findings, and generates investigation reports while keeping sensitive actions behind human approval. The platform reduced investigation time by roughly 85%, saving an estimated 2,180 analyst hours annually at an average compute cost of about $2.50 per report, and was architected so multiple AI agents can share the same infrastructure and integrations.",
+            "Built Scout, a Claude-powered agent that automates first-pass security investigations across nine platforms via an MCP server and reusable tool library. Scout gathers evidence, analyzes findings, and drafts reports behind human approval, cutting investigation time ~85% and saving ~2,180 analyst hours a year at ~$2.50 per report.",
     },
     {
         role: "IT & Network Support Intern",
         company: "Lightspeed Technology",
         date: "June 2024 - December 2025",
         description:
-            "With Virtue, I developed backend VOIP solutions to improve performance and user experience. I led client onboarding and new hire training. I also troubleshot network issues via SIP flow analysis, provided on-site IT support, and managed hardware setups.",
+            "Built backend VOIP solutions with Virtue, led client onboarding and new-hire training, and resolved network issues via SIP flow analysis alongside on-site IT support and hardware setup.",
     },
     {
         role: "Web Designer",
         company: "UCF Fashion Society",
         date: "August 2025 - present",
         description:
-            "I worked with a 15-member design team to launch the Fashion Society's first official website, building responsive UI components and photo galleries in React and Tailwind while bringing Figma designs to life in an Agile-inspired workflow.",
+            "Helped launch the Fashion Society's first official website with a 15-member design team, building responsive UI components and photo galleries in React and Tailwind from Figma designs.",
     },
 ];
 
