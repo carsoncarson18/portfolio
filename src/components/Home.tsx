@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+    const [prefersReducedMotion] = useState(
+        () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false
+    );
+
     return (
         <section className="relative h-screen flex flex-col justify-center items-center bg-[#FEFEF6] overflow-hidden">
 
@@ -14,15 +19,17 @@ export default function Home() {
 
             {/* Video */}
             <div className="absolute inset-0 w-full h-full z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
-                >
-                    <source src="/newbloom.mp4" type="video/mp4" />
-                </video>
+                {!prefersReducedMotion && (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                    >
+                        <source src="/newbloom.mp4" type="video/mp4" />
+                    </video>
+                )}
                 <div className="absolute inset-0 bg-white/30" />
             </div>
 

@@ -38,7 +38,7 @@ export default function AudioPlayer({
             ref={audioRef}
             src={src}
             loop={loop}
-            preload="auto"
+            preload="none"
             style={{ display: "none" }}
         />
     );
