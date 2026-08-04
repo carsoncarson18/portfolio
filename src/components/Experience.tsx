@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
+        role: "Technology Solutions Intern",
+        company: "Brown & Brown",
+        date: "May 2026 - August 2026",
+        description:
+            "I designed and built Scout, a Claude-powered security operations agent that automates first-pass security investigations across nine enterprise security platforms. Using an MCP server and a reusable library of tools and skills, Scout gathers evidence, analyzes findings, and generates investigation reports while keeping sensitive actions behind human approval. The platform reduced investigation time by roughly 85%, saving an estimated 2,180 analyst hours annually at an average compute cost of about $2.50 per report, and was architected so multiple AI agents can share the same infrastructure and integrations.",
+    },
+    {
         role: "IT & Network Support Intern",
         company: "Lightspeed Technology",
         date: "June 2024 - December 2025",
