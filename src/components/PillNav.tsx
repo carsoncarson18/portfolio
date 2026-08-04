@@ -217,6 +217,15 @@ const PillNav: React.FC<PillNavProps> = ({
         onMobileMenuClick?.();
     };
 
+    const handleHashNav = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (!href.startsWith('#')) return;
+        const target = document.getElementById(href.slice(1));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.pushState(null, '', href);
+    };
+
     const isExternalLink = (href: string) =>
         href.startsWith('http://') ||
         href.startsWith('https://') ||
@@ -348,7 +357,7 @@ const PillNav: React.FC<PillNavProps> = ({
                             );
 
                             const basePillClasses =
-                                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
+                                'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] lowercase whitespace-nowrap cursor-pointer px-0';
 
                             return (
                                 <li key={item.href} role="none" className="flex h-full">
@@ -373,6 +382,7 @@ const PillNav: React.FC<PillNavProps> = ({
                                             aria-label={item.ariaLabel || item.label}
                                             onMouseEnter={() => handleEnter(i)}
                                             onMouseLeave={() => handleLeave(i)}
+                                            onClick={(e) => handleHashNav(e, item.href)}
                                         >
                                             {PillContent}
                                         </a>
@@ -430,7 +440,7 @@ const PillNav: React.FC<PillNavProps> = ({
                         };
 
                         const linkClasses =
-                            'block py-3 px-4 text-[16px] font-medium rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
+                            'block py-3 px-4 text-[16px] font-medium lowercase rounded-[50px] transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)]';
 
                         return (
                             <li key={item.href}>
@@ -452,7 +462,10 @@ const PillNav: React.FC<PillNavProps> = ({
                                         style={defaultStyle}
                                         onMouseEnter={hoverIn}
                                         onMouseLeave={hoverOut}
-                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        onClick={(e) => {
+                                            handleHashNav(e, item.href);
+                                            setIsMobileMenuOpen(false);
+                                        }}
                                     >
                                         {item.label}
                                     </a>

@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { MotionConfig } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import AudioPlayer from "./components/AudioPlayer";
-import ExperienceEducationSection from "./components/ExperienceEducationSection";
+import AboutExperienceEducation from "./components/AboutExperienceEducation";
 import PillNav from "./components/PillNav";
 
 export default function App() {
@@ -58,8 +57,7 @@ export default function App() {
                             path="/portfolio"
                             element={
                                 <>
-                                    <About id="about" />
-                                    <ExperienceEducationSection id="education" />
+                                    <AboutExperienceEducation id="about" />
                                     <Projects
                                         id="projects"
                                         playing={playing}

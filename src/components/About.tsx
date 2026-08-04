@@ -1,38 +1,34 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-interface AboutProps {
-    id?: string;
-}
-
-const About: React.FC<AboutProps> = ({ id }) => {
+const About: React.FC = () => {
     return (
-        <section id={id} className="relative bg-[#FEFEF6] px-6 py-20 overflow-hidden">
-
-            {/* Heading */}
-            <h2 className="text-4xl md:text-5xl font-normal text-[#2D1C1E] mb-16 text-center relative">
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-[#6B424D]/70 rounded-full"></span>
-                About Me
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+        >
+            <h2 className="relative inline-block text-[40px] md:text-6xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none mb-8">
+                <img
+                    src="/sprite.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute -top-8 -left-2 w-9 h-9 md:w-11 md:h-11 -rotate-12 [image-rendering:pixelated]"
+                />
+                about
             </h2>
 
-            {/* Bio */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="max-w-3xl mx-auto relative z-10 text-center"
-            >
-                <p className="text-2xl md:text-3xl text-[#3B2A2C] font-light leading-relaxed tracking-wide mb-8">
-                    I'm Carson Davie, a software engineer who crafts clean, efficient code and thoughtful digital experiences. I enjoy tackling challenging problems and transforming ideas into polished, practical web applications.
-                </p>
-                <p className="text-xl md:text-2xl text-[#3B2A2C]/80 font-light leading-relaxed tracking-wide">
-                    Across projects and teams, I bring creativity, collaboration, and a sharp eye for detail. My work balances function with aesthetic, aiming for solutions that feel effortless yet intentional.
-                </p>
-            </motion.div>
-
-            {/* Bottom divider */}
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-24 h-1 bg-[#6B424D]/70 rounded-full"></div>
-        </section>
+            <p className="text-xl md:text-2xl font-medium text-[#2D1C1E] leading-snug max-w-[26ch] mb-5">
+                I'm Carson Davie, a software engineer who crafts clean, efficient code and
+                thoughtful digital experiences.
+            </p>
+            <p className="text-base text-[#8C8078] leading-relaxed max-w-[42ch]">
+                I enjoy tackling challenging problems and transforming ideas into polished,
+                practical web applications — bringing creativity, collaboration, and a sharp
+                eye for detail to every project and team I work with.
+            </p>
+        </motion.div>
     );
 };
 

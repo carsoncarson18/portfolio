@@ -65,9 +65,8 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
             className="relative bg-[#FEFEF6] px-6 py-20 text-[#2D1C1E] overflow-hidden"
         >
 
-            <h2 className="text-4xl md:text-5xl font-normal mb-12 text-center relative">
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-[#6B424D] rounded-full"></span>
-                Projects
+            <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none mb-14 max-w-6xl mx-auto">
+                projects
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
@@ -113,7 +112,7 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
                                     <h3 className="text-3xl font-light transition-colors hover:text-[#6B424D]">
                                         {proj.title}
                                     </h3>
-                                    <p className="text-lg text-[#3B2A2C]/90 transition-colors hover:text-[#2D1C1E]">
+                                    <p className="text-lg text-[#8C8078] transition-colors hover:text-[#2D1C1E]">
                                         {proj.description}
                                     </p>
                                 </div>

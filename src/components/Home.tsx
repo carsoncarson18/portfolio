@@ -33,31 +33,23 @@ export default function Home() {
                 <div className="absolute inset-0 bg-white/30" />
             </div>
 
-            <div className="absolute top-0 left-0 w-full flex justify-between items-start px-6 py-6 z-10">
-                <div className="flex flex-col space-y-3">
+            <div className="absolute top-0 left-0 w-full flex justify-between items-baseline px-6 py-6 z-10">
+                <div className="flex flex-col space-y-4">
 
-                    {/* Corner bracket — top left */}
-                    <div className="absolute top-4 left-4 w-3 h-3 border-t border-l border-black/30" />
-
-                    <div className="flex flex-col space-y-0.5">
-                        <span className="text-[9px] tracking-[0.3em] uppercase text-black/30 select-none font-light">
-                            Portfolio
-                        </span>
-                        <h1 className="text-black text-2xl md:text-3xl select-none">
-                            Carson Davie
-                        </h1>
-                    </div>
+                    <h1 className="text-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight lowercase leading-none select-none">
+                        carson davie
+                    </h1>
 
                     <div className="flex flex-col space-y-1 text-sm md:text-base text-black font-light">
-                        <a href="https://github.com/carsoncarson18" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700 transition-colors flex items-center space-x-1">
+                        <a href="https://github.com/carsoncarson18" target="_blank" rel="noopener noreferrer" className="hover:text-[#3E5A3A] transition-colors flex items-center space-x-1">
                             <span>GitHub</span>
                             <span>↗</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/carson-davie/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700 transition-colors flex items-center space-x-1">
+                        <a href="https://www.linkedin.com/in/carson-davie/" target="_blank" rel="noopener noreferrer" className="hover:text-[#3E5A3A] transition-colors flex items-center space-x-1">
                             <span>LinkedIn</span>
                             <span>↗</span>
                         </a>
-                        <a href="mailto:ca331228@ucf.edu" target="_blank" rel="noopener noreferrer" className="hover:text-gray-700 transition-colors flex items-center space-x-1">
+                        <a href="mailto:carsondavie18@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#3E5A3A] transition-colors flex items-center space-x-1">
                             <span>Email</span>
                             <span>↗</span>
                         </a>
@@ -66,17 +58,14 @@ export default function Home() {
 
                 <Link
                     to="/portfolio"
-                    className="bg-black text-white text-base font-light px-6 py-3 rounded-full transition-colors flex items-center space-x-2 shrink-0"
-                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "rgb(107, 66, 77)")}
+                    className="bg-black text-white text-lg md:text-xl font-normal px-8 py-4 md:px-10 md:py-5 rounded-full transition-colors flex items-center space-x-2 shrink-0 -translate-y-[3px] sm:-translate-y-[10px] md:-translate-y-[18px] lg:-translate-y-[25px]"
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "rgb(62, 90, 58)")}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "black")}
                 >
                     <span>Open Portfolio</span>
                     <span>↗</span>
                 </Link>
             </div>
-
-            {/* Bottom-right corner bracket */}
-            <div className="absolute bottom-4 right-5 w-3 h-3 border-b border-r border-black/30 z-10" />
         </section>
     );
 }

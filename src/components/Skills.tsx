@@ -38,10 +38,9 @@ export default function SkillsCarousel({ id }: SkillsCarouselProps) {
         <section id={id} className="relative py-32 px-6 bg-[#FEFEF6] overflow-hidden">
 
             {/* Heading */}
-            <div className="text-center mb-16 relative">
-                <h2 className="text-4xl md:text-5xl font-light text-[#2D1C1E]/90 mt-1 relative">
-                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-[#6B424D]/70 rounded-full"></span>
-                    Skills
+            <div className="mb-14 max-w-6xl mx-auto">
+                <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none">
+                    skills
                 </h2>
             </div>
 
@@ -58,10 +57,10 @@ export default function SkillsCarousel({ id }: SkillsCarouselProps) {
                         <motion.div
                             key={i}
                             whileHover={{ scale: 1.08 }}
-                            className="relative inline-block min-w-[180px] rounded-3xl p-[2px] bg-gradient-to-br from-[#6B424D]/20 via-[#6B424D]/30 to-[#6B424D]/20 transition-all shadow-md hover:shadow-lg"
+                            className="relative inline-block min-w-[180px] rounded-3xl p-[2px] bg-gradient-to-br from-[#3E5A3A]/15 via-[#3E5A3A]/25 to-[#3E5A3A]/15 transition-all shadow-md hover:shadow-lg"
                         >
                             <div className="bg-[#FEFEF6]/95 rounded-3xl px-8 py-6 text-center backdrop-blur-md flex flex-col items-center gap-2">
-                                <Icon size={28} className="text-[#6B424D]" />
+                                <Icon size={28} className="text-[#3E5A3A]" />
                                 <h3 className="text-xl md:text-2xl font-light text-[#2D1C1E]/90">
                                     {name}
                                 </h3>
