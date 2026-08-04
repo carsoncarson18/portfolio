@@ -31,15 +31,6 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
             bg: "rgba(107,66,77,0.8)",
         },
         {
-            title: "Solar Capability Analysis App",
-            description:
-                "A geographic analysis designed to identify the optimal locations for solar farms in the Orlando region.",
-            tech: ["ArcGIS Pro", "WeatherAPI", "React"],
-            url: "https://carsoncarson18.github.io/solar-react-app/",
-            image: "/solar.png",
-            bg: "rgba(167,196,198,0.8)",
-        },
-        {
             title: "UCF Fashion Society",
             description:
                 "The official website for UCF's Fashion Society, featuring responsive photo galleries and event pages.",
@@ -47,6 +38,15 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
             url: "https://ucffashionsociety.com/",
             image: "/fshomepage.jpg",
             bg: "rgba(251,207,232,0.8)",
+        },
+        {
+            title: "Solar Capability Analysis App",
+            description:
+                "A geographic analysis designed to identify the optimal locations for solar farms in the Orlando region.",
+            tech: ["ArcGIS Pro", "WeatherAPI", "React"],
+            url: "https://carsoncarson18.github.io/solar-react-app/",
+            image: "/solar.png",
+            bg: "rgba(167,196,198,0.8)",
         },
         {
             title: "Naive Instrumental Dj_Dave Remix",

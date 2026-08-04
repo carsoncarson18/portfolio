@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-white/30" />
             </div>
 
-            <div className="absolute top-0 left-0 w-full flex justify-between px-6 py-6 z-10">
+            <div className="absolute top-0 left-0 w-full flex justify-between items-start px-6 py-6 z-10">
                 <div className="flex flex-col space-y-3">
 
                     {/* Corner bracket — top left */}
@@ -66,7 +66,7 @@ export default function Home() {
 
                 <Link
                     to="/portfolio"
-                    className="bg-black text-white text-base font-light px-6 rounded-full transition-colors flex items-center space-x-2"
+                    className="bg-black text-white text-base font-light px-6 py-3 rounded-full transition-colors flex items-center space-x-2 shrink-0"
                     onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "rgb(107, 66, 77)")}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "black")}
                 >

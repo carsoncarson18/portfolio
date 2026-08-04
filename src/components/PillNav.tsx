@@ -11,6 +11,7 @@ export type PillNavItem = {
 export interface PillNavProps {
     logo: string;
     logoAlt?: string;
+    homeHref?: string;
     items: PillNavItem[];
     activeHref?: string;
     className?: string;
@@ -26,6 +27,7 @@ export interface PillNavProps {
 const PillNav: React.FC<PillNavProps> = ({
     logo,
     logoAlt = 'Logo',
+    homeHref = '/',
     items,
     activeHref,
     className = '',
@@ -115,21 +117,11 @@ const PillNav: React.FC<PillNavProps> = ({
 
         if (initialLoadAnimation) {
             const logo = logoRef.current;
-            const navItems = navItemsRef.current;
 
             if (logo) {
                 gsap.set(logo, { scale: 0 });
                 gsap.to(logo, {
                     scale: 1,
-                    duration: 0.6,
-                    ease
-                });
-            }
-
-            if (navItems) {
-                gsap.set(navItems, { width: 0, overflow: 'hidden' });
-                gsap.to(navItems, {
-                    width: 'auto',
                     duration: 0.6,
                     ease
                 });
@@ -253,9 +245,9 @@ const PillNav: React.FC<PillNavProps> = ({
                 aria-label="Primary"
                 style={cssVars}
             >
-                {isRouterLink(items?.[0]?.href) ? (
+                {isRouterLink(homeHref) ? (
                     <Link
-                        to={items[0].href}
+                        to={homeHref}
                         aria-label="Home"
                         onMouseEnter={handleLogoEnter}
                         role="menuitem"
@@ -273,7 +265,7 @@ const PillNav: React.FC<PillNavProps> = ({
                     </Link>
                 ) : (
                     <a
-                        href={items?.[0]?.href || '#'}
+                        href={homeHref || '#'}
                         aria-label="Home"
                         onMouseEnter={handleLogoEnter}
                         ref={el => {
@@ -292,7 +284,7 @@ const PillNav: React.FC<PillNavProps> = ({
 
                 <div
                     ref={navItemsRef}
-                    className="relative flex justify-center items-center w-full rounded-full hidden md:flex"
+                    className="relative flex justify-center items-center rounded-full hidden md:flex"
                     style={{
                         height: 'var(--nav-h)',
                         background: 'var(--base, #000)',
