@@ -6,7 +6,7 @@ import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 
-const MODEL_URL = "/catblend.compressed.glb";
+const MODEL_URL = "/catrave2.compressed.glb";
 
 export default function CatScene() {
     const mountRef = useRef<HTMLDivElement>(null);
@@ -54,6 +54,15 @@ export default function CatScene() {
         const rimLight = new THREE.PointLight(0xff59d4, 16, 10, 2);
         scene.add(rimLight);
 
+        // Room wash — anchored to the room's center/size rather than the
+        // character, with low decay so the glow reaches the walls instead of
+        // dying out a couple meters from the booth.
+        const washPink = new THREE.PointLight(0xff2d6b, 12, 30, 1);
+        scene.add(washPink);
+
+        const washCyan = new THREE.PointLight(0x33e0ff, 10, 30, 1);
+        scene.add(washCyan);
+
         // Bloom for the moody glow + emissive DJ buttons.
         const composer = new EffectComposer(renderer);
         composer.addPass(new RenderPass(scene, camera));
@@ -79,6 +88,12 @@ export default function CatScene() {
                 const poster = gltf.scene.getObjectByName("poster");
                 if (poster) {
                     poster.position.y -= 0.4;
+                }
+
+                const poster058 = gltf.scene.getObjectByName("poster058");
+                if (poster058) {
+                    poster058.position.y += 0.1
+                    poster058.scale.multiplyScalar(2.7);
                 }
 
                 const roomBox = new THREE.Box3().setFromObject(gltf.scene);
@@ -147,6 +162,18 @@ export default function CatScene() {
                 keyLight.target.position.copy(focus);
                 fillLight.position.set(focus.x - catMaxDim * 1.2, focus.y + catMaxDim * 0.6, focus.z - catMaxDim * 0.4);
                 rimLight.position.set(focus.x - catMaxDim * 0.2, focus.y + catMaxDim * 1.2, focus.z - catMaxDim * 1.0);
+
+                const roomCenter = roomBox.getCenter(new THREE.Vector3());
+                washPink.position.set(
+                    roomBox.min.x + roomSize.x * 0.15,
+                    roomCenter.y + roomSize.y * 0.25,
+                    roomBox.max.z - roomSize.z * 0.15
+                );
+                washCyan.position.set(
+                    roomBox.max.x - roomSize.x * 0.15,
+                    roomCenter.y + roomSize.y * 0.15,
+                    roomBox.min.z + roomSize.z * 0.15
+                );
 
                 gltf.scene.traverse((obj) => {
                     if ((obj as THREE.Mesh).isMesh) {
