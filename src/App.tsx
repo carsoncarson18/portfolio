@@ -19,7 +19,7 @@ export default function App() {
 
     return (
         <MotionConfig reducedMotion="user">
-            <div className="relative min-h-screen font-sans bg-[#FEFEF6] text-black">
+            <div className="relative min-h-screen font-sans bg-[#0a0510] text-white">
                 {/* Background audio */}
                 <AudioPlayer
                     src="/naiveRemix.wav"
@@ -40,7 +40,7 @@ export default function App() {
                             { label: 'Contact', href: '#contact' },
                         ]}
                         activeHref="/portfolio"
-                        className="sticky top-0 z-100 w-full bg-[#FCFCFC] flex justify-center
+                        className="sticky top-0 z-100 w-full bg-[#0a0510] flex justify-center
                          md:max-w-4xl md:mx-auto"
                         ease="power2.easeOut"
                         baseColor="#000000"

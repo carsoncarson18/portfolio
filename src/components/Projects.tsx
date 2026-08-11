@@ -62,10 +62,10 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
     return (
         <section
             id={id}
-            className="relative bg-[#FEFEF6] px-6 py-20 text-[#2D1C1E] overflow-hidden"
+            className="relative bg-[#0a0510] px-6 py-20 text-white overflow-hidden"
         >
 
-            <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none mb-14 max-w-6xl mx-auto">
+            <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-white lowercase leading-none mb-14 max-w-6xl mx-auto">
                 projects
             </h2>
 
@@ -109,10 +109,10 @@ export default function Projects({ id, playing, togglePlaying }: ProjectsProps) 
                             {/* Project description + audio button */}
                             <div className="mt-6 flex flex-col md:flex-row md:justify-between items-start md:items-center text-center md:text-left space-y-4 md:space-y-0">
                                 <div className="flex-1">
-                                    <h3 className="text-3xl font-light transition-colors hover:text-[#6B424D]">
+                                    <h3 className="text-3xl font-light transition-colors hover:text-[#D9A6B3]">
                                         {proj.title}
                                     </h3>
-                                    <p className="text-lg text-[#8C8078] transition-colors hover:text-[#2D1C1E]">
+                                    <p className="text-lg text-[#8C8078] transition-colors hover:text-white">
                                         {proj.description}
                                     </p>
                                 </div>

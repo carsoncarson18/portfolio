@@ -4,7 +4,7 @@
 
 
 body {
-  @apply bg-[#FCFCFC] text-[#2D1C1E];
+  @apply bg-[#0a0510] text-white;
 }
 
 /* Glitch animation */

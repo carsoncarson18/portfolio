@@ -7,10 +7,10 @@ interface ContactProps {
 
 export default function Contact({ id }: ContactProps) {
     return (
-        <section id={id} className="bg-[#FEFEF6] text-[#2D1C1E] px-6 py-16 md:py-20 border-t border-black/10">
+        <section id={id} className="bg-[#0a0510] text-white px-6 py-16 md:py-20 border-t border-white/10">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
                 <div>
-                    <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none mb-6">
+                    <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-white lowercase leading-none mb-6">
                         contact
                     </h2>
                     <p className="text-lg md:text-xl text-[#8C8078] leading-relaxed max-w-[36ch]">
@@ -21,7 +21,7 @@ export default function Contact({ id }: ContactProps) {
                 <div className="flex flex-col items-start md:items-end gap-6">
                     <a
                         href="mailto:carsondavie18@gmail.com"
-                        className="inline-flex items-center gap-2 bg-black text-white text-lg md:text-xl px-7 py-4 rounded-full transition-colors hover:bg-[#3E5A3A]"
+                        className="inline-flex items-center gap-2 bg-white text-black text-lg md:text-xl px-7 py-4 rounded-full transition-colors hover:bg-[#3E5A3A] hover:text-white"
                     >
                         <FaEnvelope size={18} />
                         carsondavie18@gmail.com

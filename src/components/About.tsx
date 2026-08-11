@@ -9,7 +9,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
         >
-            <h2 className="relative inline-block text-[40px] md:text-6xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none mb-8">
+            <h2 className="relative inline-block text-[40px] md:text-6xl font-extrabold tracking-tight text-white lowercase leading-none mb-8">
                 <img
                     src="/sprite.png"
                     alt=""
@@ -19,7 +19,7 @@ const About: React.FC = () => {
                 about
             </h2>
 
-            <p className="text-xl md:text-2xl font-medium text-[#2D1C1E] leading-snug max-w-[26ch] mb-5">
+            <p className="text-xl md:text-2xl font-medium text-white leading-snug max-w-[26ch] mb-5">
                 I'm Carson Davie, a software engineer who crafts clean, efficient code and
                 thoughtful digital experiences.
             </p>

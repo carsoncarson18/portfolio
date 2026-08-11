@@ -35,11 +35,11 @@ export default function SkillsCarousel({ id }: SkillsCarouselProps) {
     const [isPaused, setIsPaused] = useState(false);
 
     return (
-        <section id={id} className="relative py-32 px-6 bg-[#FEFEF6] overflow-hidden">
+        <section id={id} className="relative py-32 px-6 bg-[#0a0510] overflow-hidden">
 
             {/* Heading */}
             <div className="mb-14 max-w-6xl mx-auto">
-                <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-[#2D1C1E] lowercase leading-none">
+                <h2 className="text-[46px] md:text-7xl font-extrabold tracking-tight text-white lowercase leading-none">
                     skills
                 </h2>
             </div>
@@ -59,9 +59,9 @@ export default function SkillsCarousel({ id }: SkillsCarouselProps) {
                             whileHover={{ scale: 1.08 }}
                             className="relative inline-block min-w-[180px] rounded-3xl p-[2px] bg-gradient-to-br from-[#3E5A3A]/15 via-[#3E5A3A]/25 to-[#3E5A3A]/15 transition-all shadow-md hover:shadow-lg"
                         >
-                            <div className="bg-[#FEFEF6]/95 rounded-3xl px-8 py-6 text-center backdrop-blur-md flex flex-col items-center gap-2">
+                            <div className="bg-[#15101c]/95 rounded-3xl px-8 py-6 text-center backdrop-blur-md flex flex-col items-center gap-2">
                                 <Icon size={28} className="text-[#3E5A3A]" />
-                                <h3 className="text-xl md:text-2xl font-light text-[#2D1C1E]/90">
+                                <h3 className="text-xl md:text-2xl font-light text-white/90">
                                     {name}
                                 </h3>
                             </div>
