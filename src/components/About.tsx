@@ -25,7 +25,7 @@ const About: React.FC = () => {
             </p>
             <p className="text-base text-[#8C8078] leading-relaxed max-w-[42ch]">
                 I enjoy tackling challenging problems and transforming ideas into polished,
-                practical web applications — bringing creativity, collaboration, and a sharp
+                practical applications. I bring creativity, collaboration, and a sharp
                 eye for detail to every project and team I work with.
             </p>
         </motion.div>

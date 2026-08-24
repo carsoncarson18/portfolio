@@ -34,7 +34,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-white/10" />
             </div>
 
-            <div className="absolute top-0 left-0 w-full flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-6 sm:gap-4 px-6 py-6 z-10">
+            <div className="absolute top-0 left-0 w-full flex flex-col items-start sm:flex-row sm:justify-between sm:items-baseline gap-6 sm:gap-4 px-6 py-6 z-10">
                 <div className="flex flex-col space-y-4">
 
                     <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight lowercase leading-none select-none">
@@ -59,7 +59,7 @@ export default function Home() {
 
                 <Link
                     to="/portfolio"
-                    className="self-start bg-white text-black text-lg md:text-xl font-normal px-8 py-4 md:px-10 md:py-5 rounded-full transition-colors flex items-center space-x-2 shrink-0 sm:-translate-y-[10px] md:-translate-y-[18px] lg:-translate-y-[25px]"
+                    className="bg-white text-black text-lg md:text-xl font-normal px-8 py-4 md:px-10 md:py-5 rounded-full transition-colors flex items-center space-x-2 shrink-0 sm:-translate-y-[18px] md:-translate-y-[22px] lg:-translate-y-[29px]"
                     onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ff2d6b")}
                     onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "white")}
                 >
